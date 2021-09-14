@@ -21,8 +21,8 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 		[SerializeField]
 		Material _material;
 
-		[SerializeField]
-		Transform[] _waypoints;
+		//[SerializeField]
+		public Transform[] _waypoints;
 		private List<Vector3> _cachedWaypoints;
 
 		[SerializeField]

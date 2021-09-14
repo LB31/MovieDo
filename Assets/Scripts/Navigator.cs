@@ -31,6 +31,7 @@ public class Navigator : MonoBehaviour
         locationProvider = LocationProviderFactory.Instance.DefaultLocationProvider;
         map = LocationProviderFactory.Instance.mapManager;
 
+        CurrentGoal = WaypointManager.Instance.Waypoints[0];
         //CurrentGoal = FindNearestWaypoint();
         //SelectWaypoint();
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Mapbox.Unity.Location;
@@ -34,6 +35,7 @@ public class WaypointManager : Singleton<WaypointManager>
             wp.WaypointReference = instance;
             instance.name = wp.Title;
             instance.position = map.GeoToWorldPosition(location, true);
+            instance.gameObject.AddComponent<WaypointController>().Waypoint = wp;
 
             wpLoactions.Add(location);
         }
@@ -47,4 +49,17 @@ public class WaypointManager : Singleton<WaypointManager>
             //SpawnedPoIs[i].localScale = new Vector3(SpawnScale, SpawnScale, SpawnScale);
         }
     }
+}
+
+[Serializable]
+public class Waypoint
+{
+    public string Title;
+    [Geocode]
+    public string Location;
+
+    public GameObject SceneContent;
+
+    [HideInInspector]
+    public Transform WaypointReference;
 }

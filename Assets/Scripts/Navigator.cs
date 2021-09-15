@@ -15,7 +15,12 @@ public class Navigator : MonoBehaviour
 {
     public float DistanceForInteraction = 10;
 
-    public Waypoint CurrentGoal;
+    private Waypoint currentGoal;
+    public Waypoint CurrentGoal
+    {
+        get { return currentGoal; }
+        set { currentGoal = value; SelectWaypoint(); }
+    }
 
     private DirectionsFactory directions;
     private ILocationProvider locationProvider;
@@ -32,8 +37,9 @@ public class Navigator : MonoBehaviour
         map = LocationProviderFactory.Instance.mapManager;
 
         CurrentGoal = WaypointManager.Instance.Waypoints[0];
+        GameManager.Instance.CurrentContent = CurrentGoal.SceneContent;
         //CurrentGoal = FindNearestWaypoint();
-        //SelectWaypoint();
+        SelectWaypoint();
     }
 
     [ContextMenu("SelectWaypoint")]
@@ -42,7 +48,7 @@ public class Navigator : MonoBehaviour
         // test TODO
         directions._waypoints[1] = CurrentGoal.WaypointReference;
 
-        StartCoroutine(CalcDistanceToGoal()); // TODO stop when reached
+        //StartCoroutine(CalcDistanceToGoal()); // TODO stop when reached
     }
 
     [ContextMenu("Find nearest WP")]

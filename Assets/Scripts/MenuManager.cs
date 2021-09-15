@@ -19,7 +19,7 @@ public class MenuManager : MonoBehaviour
     public GameObject MapWorld;
     public GameObject ARWorld;
 
-    
+
 
     private AbstractMap mapManager;
 
@@ -31,7 +31,6 @@ public class MenuManager : MonoBehaviour
 
         AssignButtons();
 
-        return;
         inAR = true;
         ToggleAR();
     }
@@ -47,12 +46,12 @@ public class MenuManager : MonoBehaviour
     {
         // Map
         MapWorld.SetActive(inAR);
-        RecenterButton.gameObject.SetActive(inAR);
+        RecenterButton.gameObject.SetActive(inAR);     
+        ShowARButton.gameObject.SetActive(inAR);
 
         // AR
         ARWorld.SetActive(!inAR);
         ShowMapButton.gameObject.SetActive(!inAR);
-
 
         inAR = !inAR;
     }

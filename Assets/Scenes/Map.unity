@@ -572,7 +572,7 @@ MonoBehaviour:
   Waypoints:
   - Title: Bunina 25
     Location: 46.4813, 30.7379
-    SceneContent: {fileID: 919132149155446097, guid: de4da3906a001624fabcc7838ddf2eb4,
+    SceneContent: {fileID: 3820770126878553333, guid: d91def533588f4e86b9df0f64bb9eaf1,
       type: 3}
     WaypointReference: {fileID: 0}
   - Title: Museum of modern art

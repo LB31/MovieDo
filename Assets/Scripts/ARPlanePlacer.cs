@@ -19,6 +19,8 @@ public class ARPlanePlacer : MonoBehaviour
     public GameObject ContentRepresentation;
     public Transform Content;
 
+    public GameObject PlaceUI;
+
     [HideInInspector]
     public bool PlacementAllowed { get; set; } = true;
     //public GameObject RecenterButton;
@@ -50,6 +52,8 @@ public class ARPlanePlacer : MonoBehaviour
     {
         Content = GameManager.Instance.CurrentContent.transform;
         TooglePlacing(true);
+
+        PlaceUI.SetActive(false);
     }
 
     private void OnDisable()
@@ -87,7 +91,7 @@ public class ARPlanePlacer : MonoBehaviour
 
         float angle = Quaternion.Angle(Content.rotation, m_SessionOrigin.transform.rotation);
         placementPose.rotation.y = angle;
-        m_SessionOrigin.MakeContentAppearAt(Content, placementPose.position, placementPose.rotation);
+        m_SessionOrigin.MakeContentAppearAt(Content, placementPose.position, Quaternion.Euler(0, Camera.main.transform.rotation.y, 0));
 
         TooglePlacing(false);
     }
@@ -106,6 +110,7 @@ public class ARPlanePlacer : MonoBehaviour
         if (placementPoseIsValid)
         {
             ContentRepresentation.SetActive(true);
+            PlaceUI.SetActive(false);
 
             //ContentRepresentation.transform.SetPositionAndRotation(placementPose.position, placementPose.rotation);
             ContentRepresentation.transform.position = placementPose.position;
@@ -113,6 +118,7 @@ public class ARPlanePlacer : MonoBehaviour
         else
         {
             ContentRepresentation.gameObject.SetActive(false);
+            PlaceUI.SetActive(true);
         }
     }
 

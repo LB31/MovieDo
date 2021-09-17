@@ -32,6 +32,7 @@ public class WaypointManager : Singleton<WaypointManager>
         {
             Vector2d location = Conversions.StringToLatLon(wp.Location);
             Transform instance = Instantiate(WaypointPrefab, WaypointParent).transform;
+            instance.gameObject.SetActive(true);
             wp.WaypointReference = instance;
             instance.name = wp.Title;
             instance.position = map.GeoToWorldPosition(location, true);

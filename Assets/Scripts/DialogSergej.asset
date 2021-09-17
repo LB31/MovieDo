@@ -14,6 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpeakingCharacter: 0
   Dialogs:
-  - ContextName: Test
+  - ContextName: Idle
     Index: 0
-    Text: I am Sergej. Yeah
+    Text: 'I had it just a few minus ago!
+
+      Oh no!
+
+      Ugh!
+
+'
+  - ContextName: searching in the bush
+    Index: 1
+    Text: 'Where is my book ?
+
+      Oooh that''s not good, very bad, no, no, no,
+      just not that!'
+  - ContextName: Given book
+    Index: 2
+    Text: "Oh thank you! I couldn't find it in any way ! \nI lost it after a fight!"
+  - ContextName: before jumping
+    Index: 0
+    Text: Wait...I can show you

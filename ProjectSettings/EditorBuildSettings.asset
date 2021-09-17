@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Map.unity
-    guid: 8a7519aa070b043c89be4ddf90b1ac75
-  - enabled: 1
     path: Assets/Scenes/StartScreen.unity
     guid: 7a83853b90fab1e40a958d28c53d9be4
+  - enabled: 1
+    path: Assets/Scenes/Map.unity
+    guid: 8a7519aa070b043c89be4ddf90b1ac75
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}

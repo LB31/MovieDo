@@ -1,29 +1,9 @@
 fileFormatVersion: 2
-guid: 5c3aae19f5d2ca141a7c0d95975b536e
+guid: 2ab160fd18b67e244a9e82d86b2760b1
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Socle_Albedo
-    second: {fileID: 2800000, guid: bd51756a1981852488e57afbb51be514, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Socle_Opacity
-    second: {fileID: 2800000, guid: a08ef49313640534090de87078636b71, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Vespa_ [Albedo]
-    second: {fileID: 2800000, guid: 37d75647ae0e2dd46bbfa9dce05fadb3, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Vespa_ [Opacity]
-    second: {fileID: 2800000, guid: dfd5c3e93be4fc846aafd841553edb19, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
